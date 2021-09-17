@@ -23,7 +23,7 @@ function Copy-FileToRestrictedRDP {
                     throw "File or folder does not exist"
                 
                     if ((Get-Item $_).Length / 1mb -gt 64 ) {
-                        throw "File to big, must be smaller than 64mb"
+                        throw "File too big, must be smaller than 64mb"
                     }
                 }
                 return $true
